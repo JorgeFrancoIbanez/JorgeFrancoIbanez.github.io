@@ -95,10 +95,12 @@ h4{
 .footer {
 	padding-top: 19px;
 	color: #777;
+    margin-top: 20px;
 	border-top: 1px solid #e5e5e5;
 }
 
 h2{
+    margin-right: 20px;
     border-bottom: 1px solid #e5e5e5;
 }
 .salto{
@@ -112,34 +114,33 @@ h2{
     max-width: 730px;
   }
 }
-.container-narrow > hr {
-  margin: 30px 0;
-}
 
 
 .marketing p + h4 {
   margin-top: 28px;
 }
 
-/* Responsive: Portrait tablets and up *///////////////////////////////////////////////////////////////
+/* Responsive: tablets *///////////////////////////////////////////////////////////////
 @media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
+  /* Quita padding*/
   .header,
   .marketing,
   .footer {
     padding-right: 0;
     padding-left: 0;
   }
-  /* Space out the masthead */
+  
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  
+  .footer{
+        text-align: center;
+    }
 }
+/* Responsive: cellphones *///////////////////////////////////////////////////////////////
 @media screen and (max-width: 490px) {
-  /* Remove the padding we set earlier */
-	.proimg{
-		display: none;
-	}
+    .footer{
+        text-align: center;
+    }
+    
 }
