@@ -1,0 +1,145 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+li{
+    list-style-type:disc;
+}
+h4{
+    
+	display: block;
+	margin-left: 5px;
+}
+.mainimg{
+	width: 210px;
+	height: 210px;
+    display: inline-block;
+}
+.centrar{
+    text-align: center;
+}
+.bloqueEspecial{
+    background-color: #EEEEEE;
+	text-align: left;
+    margin-top: 10px;
+}
+.avaimg{
+	width:50px;
+	height:50px;
+	display: inline-block;
+}
+.proimg{
+	margin-top: 5px;
+	width:80px;
+	height:80px;
+	
+	display: inline-block;
+}
+.nolink{
+    background-color:#FFFFFF;
+    display: inline-block;
+    float: left;
+    height: 332px;
+}
+.bloque{
+	background-color: #EEEEEE;
+	border-radius: 1em;
+	text-align: center;
+    margin-top: 10px;
+}
+
+.avaliable{
+    
+}
+.caja:link {
+    color:#39333F;
+	text-decoration: none;
+}
+
+.caja:visited {
+    color:#39333F;
+	text-decoration: none;
+}
+
+.caja:hover {
+    color:#39333F;
+	text-decoration: none;
+}
+
+.caja:active {
+    color:#39333F;
+	text-decoration: none;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+	padding-top: 19px;
+	color: #777;
+	border-top: 1px solid #e5e5e5;
+}
+
+h2{
+    border-bottom: 1px solid #e5e5e5;
+}
+.salto{
+    margin-top: 10%;
+}
+
+
+/* Customize container *///////////////////////////////////////////////////
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up *///////////////////////////////////////////////////////////////
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  
+}
+@media screen and (max-width: 490px) {
+  /* Remove the padding we set earlier */
+	.proimg{
+		display: none;
+	}
+}
