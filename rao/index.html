@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>RAOWEB</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+	<!--AWESOME FONT-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- MATERIALIZE-->
+	    <link href="https://cdn.rawgit.com/Dogfalo/materialize/master/dist/css/materialize.css" rel="stylesheet">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+	
+  <body ng-app="yapp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="">
+      <div ui-view></div>
+    </div>
+
+	  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+	  	<script src= "https://cdn.rawgit.com/Dogfalo/materialize/master/dist/js/materialize.js"></script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="scripts/modules/angular/angular.js"></script>
+    <script src="scripts/modules/angular-mocks/angular-mocks.js"></script>
+    <script src="scripts/modules/ui-router/release/angular-ui-router.js"></script>
+    <script src="scripts/modules/angular-animate/angular-animate.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/service/passDataService.js"></script>
+    <script src="scripts/service/loginService.js"></script>
+    <script src="scripts/service/sessionService.js"></script>
+    <script src="scripts/controllers/teacherprofile.js"></script>
+    <script src="scripts/controllers/courselist.js"></script>
+    <script src="scripts/controllers/courseview.js"></script>
+    <script src="scripts/controllers/studentlist.js"></script>
+	<script src="scripts/controllers/coursestatistics.js"> </script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,0 +1,44 @@
+
+<div>
+
+	<div class="jumbotron">
+		<div class="container">
+			<div ng-controller="studentsByCourseCtrl"> 
+				<div class="row">
+					<div class="col-lg-12">
+						 <div id="coursestudents" >
+							 	<a ui-sref="dashboard.courselist"><i class="fa fa-arrow-circle-left  fa-2x"></i></a>
+	
+							<h2>{{subject}} - {{nrc}}:</h2>
+							<table>
+								<thead>
+								  <tr>
+									  <th data-field="id">ID</th>
+									  <th data-field="name">Nombre</th>
+									  <th data-field="lastname">Apellido</th>
+									  <th data-field="program">Programa</th>
+									  <th data-field="action">Acción</th>
+								  </tr>
+								</thead>
+
+								<tbody ng-repeat="s in students">
+								  <tr>
+									<td>{{s.id}}</td>
+									<td>{{s.names}}</td>
+									<td>{{s.lastnames}}</td>
+									<td>{{s.program}}</td>
+									<td>	 
+
+										<select class="browser-default" ng-model="selected[$index].attendance " ng-options="item.ID as item.Title for item in status"  />
+									</td>
+									</tr>
+								</tbody>
+							</table>
+						 </div>
+					</div>
+                </div>
+				<button  class="btn right" id="enviar" ng-click="studentPost()">Enviar lista</button>
+            </div>
+        </div>
+	</div>
+</div>
