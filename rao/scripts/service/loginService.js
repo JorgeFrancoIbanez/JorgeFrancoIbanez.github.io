@@ -5,7 +5,7 @@ yapp.factory('loginService', function($http, $location,  sessionService){
 	return{
 		login:function(data,scope){
 			scope.data = {};
-			var $promise=$http.post('http://dev.io:8000/token',data).then(function(msg){
+			var $promise=$http.post('http://172.16.8.31:8082/token',data).then(function(msg){
 //			var $promise=$http.post('https://utbweb.co/token',data).then(function(msg){
 				var uid=msg.data;
 				if(uid){
@@ -30,7 +30,7 @@ yapp.factory('loginService', function($http, $location,  sessionService){
 		},
 		
 		islogged:function(){
-			var $checkSessionServer=$http.post('http://dev.io:8000/token');
+			var $checkSessionServer=$http.post('http://172.16.8.31:8082/token');
 //			var $checkSessionServer=$http.post('https://utbweb.co/token');
 			return $checkSessionServer;
 		
