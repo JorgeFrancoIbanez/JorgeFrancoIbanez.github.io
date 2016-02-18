@@ -3,7 +3,7 @@ angular.module('yapp')
   .controller('teacherCtrl', ['$scope','loginService','$http', function($scope,loginService, $http, $location){
   	console.log(sessionStorage.getItem('user'));
 	$http({
-    url: "http://dev.io:8000/teacher/"+sessionStorage.getItem('user'), 
+    url: "http://172.16.8.31:8082/teacher/"+sessionStorage.getItem('user'), 
 //    url: "https://utbweb.co/teacher/"+sessionStorage.getItem('user'), 
     method: "GET",
     data: $.param( {username: sessionStorage.getItem('user'), token:sessionStorage.getItem('token')})
