@@ -8,7 +8,7 @@ controller('courseViewCtrl', function ($scope, $location, $http, passDataService
 		console.log("nrc nana ", $scope.course);*/
 		$http({
 //    url: "https://utbweb.co/course/"+$scope.course+"/students", 
-    url: "http://dev.io:8000/course/"+$scope.course+"/students", 
+    url: "http://172.16.8.31:8082/course/"+$scope.course+"/students", 
     method: "GET",
 	data: $.param( {username: sessionStorage.getItem('user'), token:sessionStorage.getItem('token')})
 
@@ -26,7 +26,7 @@ controller('courseViewCtrl', function ($scope, $location, $http, passDataService
 			
 	$http({
 //			url: "https://utbweb.co/course/" + $scope.course,
-			url: "http://dev.io:8000/course/" + $scope.course,
+			url: "http://172.16.8.31:8082/course/" + $scope.course,
 			method: "GET",
 			data: $.param({
 				username: sessionStorage.getItem('user'),
@@ -56,7 +56,7 @@ controller('courseViewCtrl', function ($scope, $location, $http, passDataService
 //		var nrc =  passDataService.getData(); 
 //		$scope.nrc = nrc;		console.log("nrc courseview ",$scope.nrc);
 		$http({
-		url: "http://dev.io:8000/course/"+$scope.course+"/attendance?", 
+		url: "http://172.16.8.31:8082/course/"+$scope.course+"/attendance?", 
 //		url: "https://utbweb.co/course/"+$scope.course+"/attendance?", 
 		method: "GET",
 		data: $.param( {username: sessionStorage.getItem('user'), token:sessionStorage.getItem('token')})
