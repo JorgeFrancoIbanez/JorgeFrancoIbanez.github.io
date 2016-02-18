@@ -4,7 +4,7 @@ angular.module('yapp')
 
 	$http({
 //    url: "https://utbweb.co/teacher/"+sessionStorage.getItem('user')+"/courses", 
-    url: "http://dev.io:8000/teacher/"+sessionStorage.getItem('user')+"/courses", 
+    url: "http://172.16.8.31:8082/teacher/"+sessionStorage.getItem('user')+"/courses", 
     method: "GET",
     data: $.param( {username: sessionStorage.getItem('user'), token:sessionStorage.getItem('token')})
  }).success(function (response) {
