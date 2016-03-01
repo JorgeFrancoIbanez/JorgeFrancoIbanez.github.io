@@ -128,11 +128,11 @@ angular.module('yapp')
 			Materialize.toast($scope.msgtxt, 5000,'rounded');
 			console.log(sendPost);
                 }
-		).catch(errorHandler){
-    			$scope.msgtxt=errorHandler;
+		).error(function (){
+    			$scope.msgtxt='Imposible establecer conexion';
 			Materialize.toast($scope.msgtxt, 5000,'rounded');
 			console.log(sendPost);
-		}
+		})
 //			}
 //			else{console.log("nada");}
 		};
