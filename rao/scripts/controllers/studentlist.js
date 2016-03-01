@@ -128,7 +128,7 @@ angular.module('yapp')
 			Materialize.toast($scope.msgtxt, 5000,'rounded');
 			console.log(sendPost);
                 }
-		)..catch(errorHandler){
+		).catch(errorHandler){
     			$scope.msgtxt=errorHandler;
 			Materialize.toast($scope.msgtxt, 5000,'rounded');
 			console.log(sendPost);
