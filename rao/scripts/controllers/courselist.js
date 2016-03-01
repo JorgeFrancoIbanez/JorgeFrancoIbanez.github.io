@@ -18,11 +18,11 @@ angular.module('yapp')
 	  $scope.coursename = $scope.json.courses.subjct_name;
 	  $scope.size = $scope.json.courses.length;
   	});
-	/*$scope.send = function (nrc){
+	$scope.send = function (nrc){
 			console.log(nrc);
            	passDataService.sendData(nrc);
          };
-	*/
+	
 	if(sessionStorage.getItem('user')==$scope.username){					
 		$location.path('/login');
 	}
