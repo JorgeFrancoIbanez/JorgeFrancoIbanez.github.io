@@ -142,7 +142,7 @@ angular.module('yapp')
 				
 			var request = $http({
                     method: "GET",
-                    url: 'http://172.16.8.31:8082/course/2028-201510/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS'
+                    url: "http://172.16.8.31:8082/course/"+$scope.course+"/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS"
 //                    url: 'https://utbweb.co/course/2028-201510/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS'
                 }).success(function (response) {
 		console.log(response);
