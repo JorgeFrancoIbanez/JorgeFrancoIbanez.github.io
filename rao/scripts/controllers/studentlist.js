@@ -128,8 +128,8 @@ angular.module('yapp')
 			Materialize.toast($scope.msgtxt, 5000,'rounded');
 			console.log(sendPost);
                 }
-		).error(deferred.reject){
-    			$scope.msgtxt='Registro no realizado';
+		)..catch(errorHandler){
+    			$scope.msgtxt=errorHandler;
 			Materialize.toast($scope.msgtxt, 5000,'rounded');
 			console.log(sendPost);
 		}
