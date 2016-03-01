@@ -123,9 +123,16 @@ angular.module('yapp')
 //                    url: 'https://utbweb.co/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS',
                     url: 'http://172.16.8.31:8082/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS',
                     data: sendPost
-                }).success(function(){	$scope.msgtxt='Registro realizado';
+                }).success(function(){	
+                	$scope.msgtxt='Registro realizado';
 			Materialize.toast($scope.msgtxt, 5000,'rounded');
-			console.log(sendPost);});
+			console.log(sendPost);
+                }
+		).error(deferred.reject){
+    			$scope.msgtxt='Registro no realizado';
+			Materialize.toast($scope.msgtxt, 5000,'rounded');
+			console.log(sendPost);
+		}
 //			}
 //			else{console.log("nada");}
 		};
