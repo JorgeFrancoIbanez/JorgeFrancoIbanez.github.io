@@ -106,10 +106,7 @@ yapp.config(function ($stateProvider, $urlRouterProvider) {
 });
 
 
-yapp.service('nrc', function NRC() {
-	var nrc = this;
-	nrc.txt = "default";
-});
+
 
 yapp.controller('logoutctrl', ['$scope', 'loginService', function ($scope, loginService) {
 	$scope.txt = 'Page Home';
