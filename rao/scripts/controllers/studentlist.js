@@ -107,7 +107,9 @@ angular.module('yapp')
 				
 			}
 			var sendPost = JSON.stringify({nrc:$scope.nrc , estudiantes:$scope.selected});
-		
+			$scope.msgtxt='Registro realizado';
+			Materialize.toast($scope.msgtxt, 5000,'rounded');
+			console.log(sendPost);
 			/*$scope.postData = function () {
 				$http.post('http://104.236.31.197/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS', {nrc:$scope.nrc,estudiantes:jsonData}).success(
 				  function(data){
@@ -119,20 +121,11 @@ angular.module('yapp')
 			/*
 			var res = $http.post('http://104.236.31.197/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS', sendPost);*/
 			var request = $http({
-                	method: "post",
-//              	     url: 'https://utbweb.co/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS',
-        		url: "http://172.16.8.31:8082/attendance",
-                    	data: $.param( {username: sessionStorage.getItem('user'), token:sessionStorage.getItem('token')}),sendPost
-                }).success(function(){	
-                	$scope.msgtxt='Registro realizado';
-			Materialize.toast($scope.msgtxt, 5000,'rounded');
-			console.log(sendPost);
-                }
-		).error(function (){
-    			$scope.msgtxt='Imposible establecer conexion';
-			Materialize.toast($scope.msgtxt, 5000,'rounded');
-			console.log(sendPost);
-		})
+                    method: "post",
+//                    url: 'https://utbweb.co/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS',
+                    url: 'http://172.16.8.31:8082/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS',
+                    data: sendPost
+                });
 //			}
 //			else{console.log("nada");}
 		};
@@ -149,7 +142,7 @@ angular.module('yapp')
 				
 			var request = $http({
                     method: "GET",
-                    url: "http://172.16.8.31:8082/course/"+$scope.course+"/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS"
+                    url: 'http://172.16.8.31:8082/course/2028-201510/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS'
 //                    url: 'https://utbweb.co/course/2028-201510/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS'
                 }).success(function (response) {
 		console.log(response);
