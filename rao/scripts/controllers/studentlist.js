@@ -106,7 +106,7 @@ angular.module('yapp')
 				}
 				
 			}
-			var sendPost = JSON.stringify({nrc:$scope.nrc , ESTUDIANTES:$scope.selected});
+			var sendPost = JSON.stringify({nrc:$scope.nrc , estudiantes:$scope.selected});
 		
 			/*$scope.postData = function () {
 				$http.post('http://104.236.31.197/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS', {nrc:$scope.nrc,estudiantes:jsonData}).success(
