@@ -119,10 +119,10 @@ angular.module('yapp')
 			/*
 			var res = $http.post('http://104.236.31.197/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS', sendPost);*/
 			var request = $http({
-                    method: "post",
-//                    url: 'https://utbweb.co/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS',
-                    url: 'http://172.16.8.31:8082/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS',
-                    data: sendPost
+                	method: "post",
+//              	     url: 'https://utbweb.co/attendance?username=T00010915&token=GZmd0e0wBDca8lfE5jAYADTFgcXRinHHmpKAXUGS',
+        		url: "http://172.16.8.31:8082/attendance?',
+                    	data: $.param( {username: sessionStorage.getItem('user'), token:sessionStorage.getItem('token')}),sendPost
                 }).success(function(){	
                 	$scope.msgtxt='Registro realizado';
 			Materialize.toast($scope.msgtxt, 5000,'rounded');
