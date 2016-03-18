@@ -13,9 +13,7 @@ angular.module('yapp')
 		$scope.msgtxt='';
 		$scope.login=function(data){
 						console.log("data:",data);
-
-			console.log("asasdabsdasd:");
-		loginService.login(data,$scope); //call login service
+			loginService.login(data,$scope); //call login service
 	};
 	
 /*    $scope.submit = function() {

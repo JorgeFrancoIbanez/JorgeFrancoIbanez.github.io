@@ -6,7 +6,7 @@ controller('courseViewCtrl', function ($scope, $location, $http, passDataService
 		var nrc = passDataService.getData();
 		$scope.nrc = nrc;
 		console.log("nrc nana ", $scope.course);*/
-		$http({
+	$http({
 //    url: "https://utbweb.co/course/"+$scope.course+"/students", 
     url: "http://172.16.8.31:8082/course/"+$scope.course+"/students", 
     method: "GET",
@@ -46,12 +46,12 @@ controller('courseViewCtrl', function ($scope, $location, $http, passDataService
 
 //	$scope.$watch('data_shared',function(){
 	
-	var students_names = new Array();  
-	var came = new Array(); 
-	var didnotcome = new Array(); 
-	var arrivedlate = new Array(); 
-	var leftsoon = new Array(); 
-	var undef = new Array();
+		var students_names = new Array();
+		var came = new Array();
+		var didnotcome = new Array();
+		var arrivedlate = new Array();
+		var leftsoon = new Array();
+		var undef = new Array();
 	
 //		var nrc =  passDataService.getData(); 
 //		$scope.nrc = nrc;		console.log("nrc courseview ",$scope.nrc);
@@ -206,14 +206,7 @@ controller('courseViewCtrl', function ($scope, $location, $http, passDataService
 				});            
 			}); 
 			
-			
-//	});
 
-/*	$scope.send = function (nrc) {
-		console.log('dentrodesend', nrc);
-		passDataService.sendData(nrc);
-	};
-*/
 	if (sessionStorage.getItem('user') != $scope.id) {
 		$location.path('/login');
 	};

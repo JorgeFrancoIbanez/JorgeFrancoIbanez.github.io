@@ -101,6 +101,10 @@ yapp.config(function ($stateProvider, $urlRouterProvider) {
 			url: '/reports',
 			parent: 'dashboard',
 			templateUrl: 'views/dashboard/reports.html'
+		})
+		.state('error', {
+			url: '/error',
+			templateUrl: 'views/dashboard/404.html'
 		});
 
 });
